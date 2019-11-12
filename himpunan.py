@@ -1,0 +1,12 @@
+#DISCLAIMER : Antara 1 dan 20, berarti 1 dan 20 tidak disertakan
+batas = range(2,20)
+A = set (range(2,20,2))
+B = set (range(2,20,2))
+C = set (range(-9,0,1))
+D = set (filter (lambda x : (x == 5) or (x % 3  or x==3) and (x % 2  or x == 2) and (x > 1) , batas))
+E = set(filter (lambda x : x not in D, batas))
+print (f"Hasil dari A ∪ B ∪ C ∪ D ∪ E adalah \n{A | B | C | D | E}")
+print (f"Hasil dari (A ∩ B) ∪ (D ∩ E) adalah \n{(A & B) | (D & E)}")
+print (f"Hasil dari (A ∪ B) ∩ (D ∪ E) adalah \n{(A | B) & (D | E)}")
+print (f"Hasil dari (A ∪ B) - (D ∪ E) adalah \n{(A | B) - (D | E)}")
+print (f"Hasil dari (A ∪ B ∪ C) - (A ∩ E) adalah \n{(A | B | C) - (A & E)}")
